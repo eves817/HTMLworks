@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"><!--匯入bootstrap-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!--匯入jQuery--> 	
+		<title >Liu</title>
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">  <!--Google字形變更-->
+		<style>	
+		body {
+		background-image: url("image/background.jpg");
+		background-attachment:fixed;  
+		}
+		#main{		
+		width:800px;
+		height:auto;
+		padding:10px;
+		background:rgba(124, 144, 228, 0.5);
+		border-radius:99em;	
+		margin: 0 auto;      <!-- 置中 -->
+			}
+		#second{			
+		width:750px;
+		height:auto;
+		line-height:50px;
+		padding:20px;
+		background:rgb(255, 255, 255);
+		color:rgb(0, 0, 113);
+		border-radius:99em;	
+		margin: 0 auto;   
+		display:inline-block;
+		text-align:center;
+		}
+		
+		.consection{
+		font-size: 20px;
+		width:400px;
+		left:10px;
+		top:10px;
+		margin:0px auto;
+		padding:20px;
+		line-height: 1.5;
+		
+}
+		.topnav{	
+		font-family: 'Indie Flower', cursive;
+		margin:3px;
+		padding: 5px;
+		overflow:hidden;
+		background-color: rgba(150, 207, 228, 0.4);
+		border-radius: 15px;
+		font-size: 25px;
+		display: flex;
+		align-items: center;
+		text-align: center;	
+	}
+		.topnav a {
+		float:left;
+		padding: 10px;
+		text-decoration: none;  <!--無底線-->
+		display: inline-block;
+		margin:0px auto;
+	
+}
+		.topnav a:hover {
+		background-color:rgba(150, 127, 228, 1);
+		color: black;
+		border-radius:30px;
+}		
+		fieldset legend{
+		text-align:center; 
+}
+	
+		
+		}
+		
+		</style>
+	</head>
+
+	<body>
+	<div id="main">
+     <div id="second">
+	<header>			
+	<div>
+		<img src="image/image.jpg" style="width:100px;height:auto;margin-bottom:-20px;">		
+   			<h1 style="font-family: 'Indie Flower', cursive;">YiTing</h1>
+			
+	</div>	
+	</header>
+		<div class="topnav">		
+			 <a href="work1.html">1</a>
+			<a href="work2.html">2</a>
+			<a href="work3.html">3</a>
+			<a href="work4.html">4</a>
+			<a href="work5.html">5</a>
+			<a href="work6.html">6</a>
+			<a href="work7.html">7</a>
+			<a href="work8.html">8</a>
+			
+		</div>
+	
+	<!--主內容-->
+	
+	<article>
+		<section class="consection">			
+			<fieldset>
+			 <legend>Forms</legend>
+			 
+			 <div style="text-align:left">
+				<form id="form" name="form">
+				 帳號：<input type="text" id="account" name="account"><br><br> 
+				 密碼：<input type="password" id="password" name="password"><br><br> 
+				 性別:
+				 <input type="radio" id="male" name="gender" value="male" > 
+				  <label for="male">Male</label>
+				  <input type="radio" id="female" name="gender" value="female">
+				  <label for="female">Female</label>
+				  <input type="radio" id="other" name="gender" value="other">
+				  <label for="other">Other</label><br><br>
+				 生日：<input type="date" id="date" name="date"><br><br> 
+				 年紀：<input type="number" id="old" name="old" min="1" max="100"><br><br> 
+				 電子郵件：<input type="email" id="email" name="email"><br><br> 
+				 身分證字號：<input type="number" id="iid" name="iid" min="100000001" max="999999999" placeholder="輸入數字9位"><br><br> 
+				 學校:
+					<select id="school" name="school">
+					<option value="臺北市立大學">臺北市立大學</option>
+					<option value="國立臺灣師範大學">國立國立臺灣大學臺灣師範大學</option>
+					<option value="國立臺灣大學">國立臺灣大學</option>
+					<option value="國立臺北教育大學">國立臺北教育大學</option>
+					<option value="國立臺北藝術大學">國立臺北藝術大學</option>
+					<option value="國立陽明大學">國立陽明大學</option>
+					<option value="國立政治大學">國立政治大學</option>
+					<option value="國立臺灣海洋大學">國立臺灣海洋大學</option>
+					<option value="國立臺北大學">國立臺北大學</option>
+					<option value="國立交通大學">國立交通大學</option>
+					<option value="國立清華大學">國立清華大學</option>
+					<option value="國立中央大學">國立中央大學</option>
+					<option value="國立體育大學">國立體育大學</option>
+					<option value="國立聯合大學">國立聯合大學</option>
+					<option value="國立臺灣科技大學">國立臺灣科技大學</option>
+					<option value="銘傳大學">銘傳大學</option>
+					<option value="大同大學">大同大學</option>
+					<option value="東吳大學">東吳大學</option>
+					<option value="實踐大學">實踐大學</option>
+					<option value="臺北醫學大學">臺北醫學大學</option>
+					<option value="康寧學校財團法人康寧大學">康寧學校財團法人康寧大學</option>
+					<option value="世新大學">世新大學</option>
+					<option value="淡江大學">淡江大學</option>
+					<option value="中華大學">中華大學</option>
+				  </select>
+				  <button type="button" id="mybtn" name="mybtn" style="float:right;border:0px;"> 
+				 <img src="https://img.icons8.com/flat_round/50/000000/checkmark.png"/>
+				 </button> <br><br>
+				 </form>
+				 </div>		
+				<div> 	
+				<p id="table" />		
+				</div>
+		   </fieldset>
+		</section>		
+	</article>
+	<!--頁尾-->
+	
+	<footer style="text-align:center">Welcome</footer>
+		<script>
+			document.getElementById("mybtn").onclick=verification; 
+			
+		function verification(){
+		var str = document.getElementById("iid");
+		y=str.value.substring(8,9);
+		var x = prompt("輸入身分證末碼");  
+		if(x==y){
+				display();
+			}else{
+				document.getElementById("table").innerHTML="輸入錯誤";	
+				}
+		}	
+
+		function display(){
+			 const form = document.forms['form'];  
+			 const account = form.elements.account.value;
+			 const password = form.elements.password.value;
+			 const gender = form.elements.gender.value;
+			 const date = form.elements.date.value;
+			 const old = form.elements.old.value;
+			 const email = form.elements.email.value;
+			 const iid = form.elements.iid.value;
+			 const school = form.elements.school.value;
+			 
+			var oold = document.getElementById("old");
+			if (!oold.checkValidity()) {
+			 document.getElementById("table").innerHTML = oold.validationMessage;
+		  } else {		
+			document.getElementById("table").innerHTML ="帳號:"+account+"\n密碼:"+password+"<br/>性別:"+gender+"<br/>生日:"+date+"\n年紀:"+old+"<br/>信箱:"+email+"<br/>身分證字號:"+iid+"<br/>學校:"+school;
+			}
+		   }
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"><!--匯入bootstrap-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!--匯入jQuery--> 	
+		<title >Liu</title>
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">  <!--Google字形變更-->
+		<style>	
+		body {
+		background-image: url("image/background.jpg");
+		background-attachment:fixed;  
+		}
+		#main{		
+		width:800px;
+		height:auto;
+		padding:10px;
+		background:rgba(124, 144, 228, 0.5);
+		border-radius:99em;	
+		margin: 0 auto;      <!-- 置中 -->
+			}
+		#second{			
+		width:750px;
+		height:auto;
+		line-height:50px;
+		padding:20px;
+		background:rgb(255, 255, 255);
+		color:rgb(0, 0, 113);
+		border-radius:99em;	
+		margin: 0 auto;   
+		display:inline-block;
+		text-align:center;
+		}
+		
+		.consection{
+		font-size: 20px;
+		width:400px;
+		left:10px;
+		top:10px;
+		margin:0px auto;
+		padding:20px;
+		line-height: 1.5;
+		
+}
+		.topnav{	
+		font-family: 'Indie Flower', cursive;
+		margin:3px;
+		padding: 5px;
+		overflow:hidden;
+		background-color: rgba(150, 207, 228, 0.4);
+		border-radius: 15px;
+		font-size: 25px;
+		display: flex;
+		align-items: center;
+		text-align: center;	
+	}
+		.topnav a {
+		float:left;
+		padding: 10px;
+		text-decoration: none;  <!--無底線-->
+		display: inline-block;
+		margin:0px auto;
+	
+}
+		.topnav a:hover {
+		background-color:rgba(150, 127, 228, 1);
+		color: black;
+		border-radius:30px;
+}		
+		fieldset legend{
+		text-align:center; 
+}
+	
+		
+		}
+		
+		</style>
+	</head>
+
+	<body>
+	<div id="main">
+     <div id="second">
+	<header>			
+	<div>
+		<img src="image/image.jpg" style="width:100px;height:auto;margin-bottom:-20px;">		
+   			<h1 style="font-family: 'Indie Flower', cursive;">YiTing</h1>
+			
+	</div>	
+	</header>
+		<div class="topnav">		
+			 <a href="work1.html">1</a>
+			<a href="work2.html">2</a>
+			<a href="work3.html">3</a>
+			<a href="work4.html">4</a>
+			<a href="work5.html">5</a>
+			<a href="work6.html">6</a>
+			<a href="work7.html">7</a>
+			<a href="work8.html">8</a>
+			
+		</div>
+	
+	<!--主內容-->
+	
+	<article>
+		<section class="consection">			
+			<fieldset>
+			 <legend>輸入成績</legend>
+			 <p id="demo"></p>	
+		   </fieldset>
+		</section>		
+	</article>
+	<!--頁尾-->
+	
+	<footer style="text-align:center">Welcome</footer>
+	</div>
+</div>
+<script>
+   
+var x = prompt("請輸入成績資料: ");  
+var score = parseInt( x / 10);
+   
+switch (score){
+case 9:
+     document.getElementById("demo").innerHTML = x+"分"+ "A等"+"及格";
+     break;
+   
+case 8:
+     document.getElementById("demo").innerHTML =  x+"分"+ "B等"+"及格";
+     break;
+   
+case 7:
+     document.getElementById("demo").innerHTML =  x+"分"+ "C等"+"及格";
+     break;
+   
+case 6:
+     document.getElementById("demo").innerHTML =  x+"分"+ "D等"+"及格";
+     break;
+   
+default:
+     document.getElementById("demo").innerHTML =  x+"分"+ "F等"+"不及格";
+     break;
+   }
+
+
+</script>
+
+	</body>
+</html>

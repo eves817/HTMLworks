@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"><!--匯入bootstrap-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!--匯入jQuery--> 	
+		<title >Liu</title>
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">  <!--Google字形變更-->
+		<style>	
+		body {
+		background-image: url("image/background.jpg");
+		background-attachment:fixed;  
+		}
+		#main{		
+		width:800px;
+		height:auto;
+		padding:10px;
+		background:rgba(124, 144, 228, 0.5);
+		border-radius:99em;	
+		margin: 0 auto;      <!-- 置中 -->
+			}
+		#second{			
+		width:750px;
+		height:auto;
+		line-height:50px;
+		padding:20px;
+		background:rgb(255, 255, 255);
+		color:rgb(0, 0, 113);
+		border-radius:99em;	
+		margin: 0 auto;   
+		display:inline-block;
+		text-align:center;
+		}
+		
+		.consection{
+		font-size: 20px;
+		width:400px;
+		left:10px;
+		top:10px;
+		margin:0px auto;
+		padding:20px;
+		line-height: 1.5;
+		
+}
+		.topnav{	
+		font-family: 'Indie Flower', cursive;
+		margin:3px;
+		padding: 5px;
+		overflow:hidden;
+		background-color: rgba(150, 207, 228, 0.4);
+		border-radius: 15px;
+		font-size: 25px;
+		display: flex;
+		align-items: center;
+		text-align: center;	
+	}
+		.topnav a {
+		float:left;
+		padding: 10px;
+		text-decoration: none;  <!--無底線-->
+		display: inline-block;
+		margin:0px auto;
+	
+}
+		.topnav a:hover {
+		background-color:rgba(150, 127, 228, 1);
+		color: black;
+		border-radius:30px;
+}		
+		fieldset legend{
+		text-align:center; 
+}
+	
+		
+		}
+		
+		</style>
+	</head>
+
+	<body>
+	<div id="main">
+     <div id="second">
+	<header>			
+	<div>
+		<img src="image/image.jpg" style="width:100px;height:auto;margin-bottom:-20px;">		
+   			<h1 style="font-family: 'Indie Flower', cursive;">YiTing</h1>
+			
+	</div>	
+	</header>
+		<div class="topnav">		
+			 <a href="work1.html">1</a>
+			<a href="work2.html">2</a>
+			<a href="work3.html">3</a>
+			<a href="work4.html">4</a>
+			<a href="work5.html">5</a>
+			<a href="work6.html">6</a>
+			<a href="work7.html">7</a>
+			<a href="work8.html">8</a>
+		</div>
+	
+	<!--主內容-->
+	
+	<article>
+		<section class="consection">			
+			<fieldset>
+			 <legend>國&英</legend>
+			 <div>
+			 國文成績：<input type="text" id="C" onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')"/><br><br> 
+			 英文成績：<input type="text" id="E" onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')"/><br><br><br> 
+			<button id="myBtn"> 送出 </button><br><br><hr> 
+			</div> 
+				<div> 
+			<ul id="demo"/> 
+			
+				</div>
+		   </fieldset>
+		</section>		
+	</article>
+	<!--頁尾-->
+	
+	<footer style="text-align:center">Welcome</footer>
+	
+
+<script>
+	var i=1; 
+	var score = new Array(); 
+	document.getElementById("myBtn").onclick=displayData; 
+	
+	function displayData()
+	{
+		
+		var x=document.getElementById("C").value; 
+		var y=document.getElementById("E").value; 
+		var sumch=0;
+		var sumen=0;
+		var avg=0;
+		j=i-1; 
+		score[j]= new Array(2); 
+		
+		//window.alert(score[j][0]); 
+		/*document.getElementById("table").innerHTML=""; */
+		score[j][0] =x.split(',');  //國
+		score[j][1] =y.split(',');	//英
+		score.sort(mysort);
+		li="";
+		for (var k=0; k<score.length; k++)
+		{ 
+		
+			sumch=score[k][0];
+			sumen=score[k][1];
+			avg=(sumch*1+sumen*1)/2;
+			
+			var li=li+"<li>"+"第 "+(k+1)+" 筆資料= "+avg+"</li>";
+			document.getElementById("demo").innerHTML=li; 
+			if(sumch*1==-1||sumen*1==-1){
+			li="結束";
+			document.getElementById("demo").innerHTML=li; 
+			}
+			
+			console.log (sumch);
+		} 
+		
+		/*document.getElementById("C").value=""; 
+		document.getElementById("E").value=""; */
+		i++;
+	
+		document.getElementById("demo").innerHTML=li;
+	
+		return false; 
+	} 
+ 
+	function mysort(a, b) {
+		//排序, 由大到小, a[0]與b[0]都是國文(也就是x), a[1]與b[1]都是英文(也就是y)
+	
+		return (b[0] + b[1]) - (a[0] + a[1]) && (b[0] - a[0]);
+		//先比對加總, 再比對國文
+	}
+</script>
+
+	</body>
+</html>
